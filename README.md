@@ -12,10 +12,9 @@ Herramienta de automatización forense desarrollada para el Trabajo Final de Má
 - Permisos de root (sudo) si se requiere montar discos o instalar YARA.
 
 ## 🔧 Instalación y Uso
-
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/nanobug8/Yara-Hunter.git](https://github.com/nanobug8/Yara-Hunter.git)
+   git clone https://github.com/nanobug8/Yara-Hunter.git 
    cd Yara-Hunter
 2. **Dar permisos de ejecución:**
    chmod +x hunter.sh
