@@ -17,6 +17,8 @@ Herramienta de automatización forense desarrollada para el Trabajo Final de Má
    git clone https://github.com/nanobug8/Yara-Hunter.git 
    cd Yara-Hunter
 2. **Dar permisos de ejecución:**
+   ```bash
    chmod +x hunter.sh
-3. **Ejecutar contra una evidencia:**
+4. **Ejecutar contra una evidencia:**
+   ```bash
    ./hunter.sh /ruta/a/la/evidencia_montada
