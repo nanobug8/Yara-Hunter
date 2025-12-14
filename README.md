@@ -1,6 +1,4 @@
-<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/5897e64f-2e97-48e8-a11e-f5d4956221f2" />
-
-# Yara-Hunter
+<img width="1130" height="682" alt="image" src="https://github.com/user-attachments/assets/6de6deab-427d-4792-a6d6-4d2c88dbd654" />
 Herramienta de automatización forense desarrollada para el Trabajo Final de Máster. Este script permite escanear evidencias forenses (Discos montados o RAM) utilizando múltiples repositorios de reglas YARA de forma secuencial y automatizada.
 
 ## 🚀 Características
