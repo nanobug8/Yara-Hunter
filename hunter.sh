@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ============================================================
-#  NOMBRE: AutoYara Deep Hunter v2.0
+#  NOMBRE: Yara Deep Hunter
 #  ID:nanobug8
 #  DESCRIPCION: Busca recursivamente todas las reglas .yar y escanea
 # ============================================================
