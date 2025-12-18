@@ -27,20 +27,14 @@ echo -e "${YELLOW}[*] Evidencia: $EVIDENCIA${NC}"
 echo "==================================================" >> $REPORTE
 echo "INICIO DE ANALISIS: $(date)" >> $REPORTE
 
-# CAMBIO CLAVE: Usamos 'find' para localizar todos los .yar desde donde estás parado
-# Esto alimenta el bucle while. No importa qué tan profundas estén las carpetas.
 find . -type f -name "*.yar" | while read regla; do
 
-    # Estética: Sacamos el nombre de la carpeta para mostrarlo bonito
     carpeta_padre=$(dirname "$regla")
     nombre_archivo=$(basename "$regla")
     
-    # Solo imprimimos en pantalla para saber que está vivo
     echo -e "${BLUE}[INFO] Carpeta: $carpeta_padre${NC}"
     echo -ne "       -> Probando regla: $nombre_archivo ... "
 
-    # Ejecutamos YARA
-    # 2>/dev/null oculta errores técnicos para limpiar la pantalla
     RESULTADO=$(yara -w -r "$regla" "$EVIDENCIA" 2>/dev/null)
 
     if [ -z "$RESULTADO" ]; then
@@ -48,12 +42,10 @@ find . -type f -name "*.yar" | while read regla; do
     else
         echo -e "${RED} [!] DETECCION [!] ${NC}"
         
-        # Guardamos en reporte y mostramos en pantalla
         echo "----------------------------------------" >> $REPORTE
         echo "[ALERTA] Regla: $regla" >> $REPORTE
         echo "$RESULTADO" >> $REPORTE
         
-        # Mostramos en rojo en la terminal
         echo -e "${RED}$RESULTADO${NC}"
     fi
 
